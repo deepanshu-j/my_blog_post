@@ -1,0 +1,34 @@
+<%-include('partials/header')-%>
+<div class="container">
+    <form class="was-validated" action="/login" method="POST">
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="userName">UserName</label>
+                <input class="form-control is-invalid" name="username" id="username" placeholder="UserName"
+                    required></input>
+                <div class="invalid-feedback">
+                    Please enter a userName for your account.
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="passWord">Password</label>
+                <input class="form-control is-invalid" name="password" id="password" placeholder="Password" required
+                    type="password"></input>
+                <div class="invalid-feedback">
+                    Please enter a Password for your account.
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success">signIn</button>
+    </form>
+    <br />
+    <form action="/signup" method="GET">
+        <label>SignUp for a New Account</label>
+        <br />
+        <button class="btn btn-primary">SignUp</button>
+    </form>
+
+</div>
+<%-include('partials/footer')-%>

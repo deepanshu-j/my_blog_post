@@ -1,0 +1,23 @@
+<%- include('partials/header') -%>
+<div class="container">
+    <form action="/NewPost" method="POST">
+        <div class="form-group">
+            <label for="titltinput">Title</label>
+            <input type="text" class="form-control" id="titleinput" aria-describedby="titlehelp"
+                placeholder="Enter Title" name="title">
+            <small id="emailHelp" class="form-text text-muted">Enter an eyecatchy title to attract people</small>
+        </div>
+
+        <div class="form-group">
+            <label for="imageInput">Image Url</label>
+            <input type="url" class="form-control" id="imageInput" placeholder="Image" name="url">
+        </div>
+        <div class="form-group">
+            <label for="Textarea">Description</label>
+            <textarea class="form-control" id="Textarea" name="description" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
+<%- include('partials/footer') -%>

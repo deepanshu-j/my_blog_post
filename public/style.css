@@ -1,0 +1,228 @@
+.card {
+    margin: auto;
+    width: 25em;
+    color: #fff;
+}
+
+#BLOGitUP {}
+
+#svgLOGO {
+    fill: lawngreen;
+    margin-right: 4px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@media screen and (max-width:800px) {
+
+    /* mobile view */
+    .bg-image {
+        /* Add the blur effect */
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .bg-text {
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border: 2px solid #f1f1f1;
+        top: 25%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1;
+        width: 50%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .bg-text2 {
+
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border: 2px solid #f1f1f1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+
+    }
+}
+
+/* desktop view */
+@media screen and (min-width:800px) {
+    .bg-image {
+        /* Add the blur effect */
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .bg-text {
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border: 3px solid #f1f1f1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 2;
+        width: 50%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .bg-text2 {
+
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+
+    }
+
+}
+
+#lab_social_icon_footer {
+    padding: 40px 0;
+    background-color: #dedede;
+}
+
+#lab_social_icon_footer a {
+    color: #333;
+}
+
+#lab_social_icon_footer .social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+/*
+      Multicoloured Hover Variations
+  */
+
+#lab_social_icon_footer #social-fb:hover {
+    color: #3B5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+    color: #4099FF;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+    color: #d34836;
+}
+
+#lab_social_icon_footer #social-em:hover {
+    color: #f39c12;
+}
+
+@media screen and (max-width:800px) {
+    body {
+
+        text-align: center;
+        background: linear-gradient(-90deg, #3f51b1 0%, #5a55ae 13%, #fb5afc 25%, #8f6aae 36%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        height: 100vh;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0%;
+        }
+
+        50% {
+            background-position: 100%;
+        }
+
+        100% {
+            background-position: 0%;
+        }
+    }
+}
+
+@media screen and (min-width:800px) {
+    body {
+
+        text-align: center;
+        background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #fb5afc 25%, #8f6aae 36%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+        background-size: 400% 400%;
+        animation: gradient 7s ease infinite;
+        height: 100vh;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0%;
+        }
+
+        50% {
+            background-position: 100%;
+        }
+
+        100% {
+            background-position: 0%;
+        }
+    }
+}

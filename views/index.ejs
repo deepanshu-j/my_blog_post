@@ -1,0 +1,133 @@
+<%- include('partials/header');  -%>
+<%function getRandomColorLight() {
+    var letters = 'BCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return color;
+}%>
+<!--div class="jumbotron" id="grad" style="color:slategrey">
+    <h1 style="text-align: center;color: lightslategrey;">MY_BLOGS!!!</h1>
+</div-->
+<br />
+
+<div class="container-fluid">
+    <%function generateRandomColor()
+    {
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        return randomColor;
+        //random color will be freshly served
+    }   
+    %>
+
+
+    <div class="card-columns">
+        <%if(posts!=null){%>
+        <% posts.forEach(function(post){ %>
+        <% var coLor=generateRandomColor(); %>
+        <div>
+            <div class=" card mb-3 CARDS" style="border-color:<%=coLor%>;" class="col-lg-4 col-md-6 col-sm-12">
+
+                <img src="<%=post.url%>" id="image_in_post" class="card-img-top" alt="err">
+
+                <div class="card-body text-primary">
+                    <h5 class="card-title" style="color:<%=coLor%>"><%=post.title %></h5>
+                    <p class="card-text" style="color:<%=coLor%>"><%=post.description%></p>
+
+                    <%var id=post._id.toString();%>
+                    <a class="btn btn-md btn-outline-primary" style="border-color:<%=coLor%>;color:<%=coLor%>;"
+                        href="/readmore/<%=id%>">Read more!!</a>
+                </div>
+            </div>
+        </div>
+
+        <% }) }%>
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container">
+
+        <!-- Grid row-->
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <a href="/about">About</a>
+                </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <a>Collaborate</a>
+                </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                    <a href="/contactus">Contact</a>
+                </h6>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
+        <hr class="rgba-white-light" style="margin: 0 15%;">
+
+        <!-- Grid row-->
+        <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+            <!-- Grid column -->
+            <div class="col-md-8 col-12 mt-5">
+                <p style="line-height: 1.7rem">A SIMPLE CARTOON SITE MADE HAVE TO FUN WITH THESE PICTURES AND THEIR
+                    DESCRIPTION :DD.
+                </p>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- icons -->
+
+    <section id="lab_social_icon_footer">
+        <!-- Include Font Awesome Stylesheet in Header -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container">
+            <div class="text-center center-block">
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100005034138064"><i id="social-fb"
+                        class="fa fa-facebook-square fa-3x social"></i></a>
+                <a target="_blank" href="https://twitter.com/johar_deepanshu"><i id="social-tw"
+                        class="fa fa-twitter-square fa-3x social"></i></a>
+                <a target="_blank"
+                    href="https://www.linkedin.com/in/deepanshu-johar-399521189?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BpkY4xFOpR3Cprxo16L%2FxDg%3D%3D"><i
+                        id="social-gp" class="fa fa-linkedin-square fa-3x social"></i></a>
+                <a target="_blank" href="https://github.com/deepanshu-j"><i id="social-em"
+                        class="fa fa-github-square fa-3x social"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2050 Copyright:
+        <a href="#">Deepanshu-J.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<%- include('partials/footer') ; -%>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%function getRandomColorLight() {
+        var letters = 'BCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * letters.length)];
+        }
+        return color;
+    }%>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <title>MY BLOG</title>
+    <style>
+        #grad {
+            background-image: linear-gradient(19deg, <%=getRandomColorLight()%>, <%=getRandomColorLight()%>);
+        }
+    </style>
+
+</head>
+
+<!-- <body style="background-color:<%=getRandomColorLight()%>;"> -->
+
+<body style="background-color:#fff;font-family: 'Open Sans', sans-serif;">
+    <!--removed flex column and flex-md-row was already there-->
+    <nav id="NAVBAR" class="navbar navbar-expand-lg navbar-light bg-light  flex-md-row bd-navbar" style="position: sticky;
+    top: 0px;
+    z-index: 1071">
+
+
+        <a class="navbar-brand" href="/">
+            <svg class="bi bi-terminal-fill" id="svgLOGO" width="2em" height="2em" viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M0 3a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V3zm9.5 5.5h-3a.5.5 0 000 1h3a.5.5 0 000-1zm-6.354-.354L4.793 6.5 3.146 4.854a.5.5 0 11.708-.708l2 2a.5.5 0 010 .708l-2 2a.5.5 0 01-.708-.708z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span id="BLOGitUP">BLOGitUP</span></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/about">ABOUT<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">CONTACT US</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/NewPost">NEWPOST</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <%if(req.user){%>
+                <li class="nav-item "> <a class="nav-link">@<%=req.user.username%></a>
+                </li>
+                <%}%>
+
+                <%if(req.user){%>
+                <li class="nav-item"> <a class="nav-link" href="/logout">LOGOUT</a>
+                </li>
+                <%}
+                
+                else{%>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">SIGNUP</a>
+                </li>
+                <%}%>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/weather">WEATHER</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+  
